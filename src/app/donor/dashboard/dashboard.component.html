@@ -1,0 +1,27 @@
+<mat-card>
+  <h3>Post a Donation</h3>
+
+  <mat-form-field class="full-width">
+    <mat-label>Food Type</mat-label>
+    <input matInput [(ngModel)]="food_type">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Quantity</mat-label>
+    <input matInput [(ngModel)]="quantity">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Pickup Time</mat-label>
+    <input matInput type="datetime-local" [(ngModel)]="pickup_time">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Location</mat-label>
+    <input matInput [(ngModel)]="location">
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" (click)="submitDonation()">
+    Submit Donation
+  </button>
+</mat-card>

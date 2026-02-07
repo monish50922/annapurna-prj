@@ -1,0 +1,24 @@
+.page-title {
+  margin-bottom: 5px;
+}
+
+.page-subtitle {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.donation-card {
+  padding: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+}

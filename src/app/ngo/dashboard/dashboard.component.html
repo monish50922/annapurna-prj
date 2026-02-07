@@ -1,0 +1,21 @@
+<h1 class="page-title">NGO Dashboard</h1>
+<p class="page-subtitle">
+  View and claim available food donations
+</p>
+
+<div class="card-grid">
+  <mat-card *ngFor="let d of donations" class="donation-card">
+    <h3>{{ d.food_type }}</h3>
+
+    <p><b>Quantity:</b> {{ d.quantity }}</p>
+    <p><b>Location:</b> {{ d.location }}</p>
+
+    <button mat-raised-button color="primary" (click)="claim(d.id)">
+      Claim Donation
+    </button>
+  </mat-card>
+</div>
+
+<p *ngIf="donations.length === 0" class="empty-state">
+  No donations available at the moment.
+</p>

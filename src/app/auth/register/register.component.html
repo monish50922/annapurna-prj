@@ -1,0 +1,72 @@
+<div class="min-h-screen flex bg-[#faf9f7]">
+
+  <!-- LEFT INFO PANEL -->
+  <div class="hidden lg:flex w-1/2 relative">
+    <img
+      src="https://images.unsplash.com/photo-1609132718484-cc90df3417f8"
+      class="absolute inset-0 w-full h-full object-cover"
+      alt="Food Donation"
+    />
+    <div class="absolute inset-0 bg-black/60 flex flex-col justify-center px-16 text-white">
+      <h1 class="text-4xl font-bold mb-4">Join Annapurna</h1>
+      <p class="text-lg">
+        Be a part of a mission to reduce food waste and
+        help communities in need.
+      </p>
+    </div>
+  </div>
+
+  <!-- REGISTER FORM -->
+  <div class="w-full lg:w-1/2 flex items-center justify-center">
+    <div class="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
+
+      <h2 class="text-2xl font-semibold mb-2">Create Account</h2>
+      <p class="text-gray-500 mb-6">Register to get started</p>
+
+      <div class="mb-4">
+        <label class="text-sm font-medium">Name</label>
+        <input [(ngModel)]="name"
+          class="w-full border rounded-lg px-4 py-2 mt-1"
+          placeholder="Your name" />
+      </div>
+
+      <div class="mb-4">
+        <label class="text-sm font-medium">Email</label>
+        <input [(ngModel)]="email"
+          class="w-full border rounded-lg px-4 py-2 mt-1"
+          placeholder="Email address" />
+      </div>
+
+      <div class="mb-4">
+        <label class="text-sm font-medium">Password</label>
+        <input type="password" [(ngModel)]="password"
+          class="w-full border rounded-lg px-4 py-2 mt-1"
+          placeholder="Password" />
+      </div>
+
+      <div class="mb-6">
+        <label class="text-sm font-medium">Register as</label>
+        <select [(ngModel)]="role"
+          class="w-full border rounded-lg px-4 py-2 mt-1">
+          <option value="DONOR">Donor</option>
+          <option value="NGO">NGO</option>
+        </select>
+      </div>
+
+      <button
+        (click)="register()"
+        class="w-full bg-orange-500 text-white py-2 rounded-xl font-medium hover:bg-orange-600">
+        Register
+      </button>
+
+      <p class="text-sm text-center text-gray-500 mt-6">
+        Already have an account?
+        <a routerLink="/login" class="text-orange-500 font-medium">
+          Login
+        </a>
+      </p>
+
+    </div>
+  </div>
+
+</div>
